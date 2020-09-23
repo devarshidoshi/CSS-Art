@@ -1,0 +1,223 @@
+<html>
+<head>
+    <tite></tite>
+<style>
+    body {
+        background-color: #FFAB40;
+    }
+    .container {
+        position: absolute;
+        top: 120px;
+        left: 400px;
+        height: 450px;
+        width: 450px;
+        background-color: #AD1457;
+        /* border: 4px solid #092532;*/
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        animation:sky 5s infinite;
+    }
+
+    @keyframes sky {
+        0% {
+            background-color: #B2FF59;
+        }
+
+        50% {
+            background-color: #76FF03;
+        }
+
+        100% {
+            background-color: #64DD17;
+        }
+    }
+
+    #sq1, #sq2, #sq3, #sq4 {
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-timing-function: linear;
+        position: absolute;
+        border: 4px solid #ffffff;
+        height: 450px;
+        width: 450px;
+        top: 120px;
+        left: 400px;
+        transform: rotate(0deg);
+    }
+
+    #sq1 {
+        animation-name: sq1;
+        transform: rotate(0deg);
+        border-color: #880E4F;
+    }
+    #sq2 {
+        animation-name: sq2;
+        transform: rotate(45deg);
+        border-color: #C2185B;
+    }
+    #sq3 {
+        animation-name: sq3;
+        transform: rotate(22.7deg);
+        border-color: #E91E63;
+    }
+    #sq4 {
+        animation-name: sq4;
+        transform: rotate(-22.7deg);
+        border-color: #F06292;
+    }
+
+        @keyframes sq1{
+            to{
+                transform:rotate(360deg);
+            }
+        }
+    @keyframes sq2 {
+        to {
+            transform: rotate(405deg);
+        }
+    }
+    @keyframes sq3 {
+        to {
+            transform: rotate(382.7deg);
+        }
+    }
+    @keyframes sq4 {
+        to {
+            transform: rotate(337.3deg);
+        }
+    }
+
+
+
+    .eyesContainer {
+        width: 180px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .eyes {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: hidden;
+        top: 80px;
+        left: 80px;
+        animation: blink 1.5s infinite;
+    }
+
+    .light {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-100%);
+    }
+
+    .pupil {
+        width: 30px;
+        height: 30px;
+        background-color: #000;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .mouth {
+        background-color: #000;
+        width: 90px;
+        height: 60px;
+        border-radius: 10px 10px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .teeth {
+        width: 50px;
+        height: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .tooth1, .tooth2 {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 5px 5px 20px 20px;
+    }
+
+    .tongue {
+        width: 60px;
+        height: 30px;
+        background-color: #ff5a00;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -15px;
+        left: 10px;
+    }
+
+    @keyframes blink {
+        0% {
+            height: 50px;
+        }
+
+        35% {
+            height: 50px;
+        }
+
+        45% {
+            height: 0px;
+        }
+
+        55% {
+            height: 50px;
+        }
+
+        100% {
+            height: 50px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="eyesContainer">
+            <div class="eyes">
+                <div class="pupil" id="leftEye">
+                    <div class="light"></div>
+                </div>
+            </div>
+            <div class="eyes">
+                <div class="pupil" id="rightEye">
+                    <div class="light"></div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <br /><br />
+        <div class="mouth">
+            
+            <div class="tongue"></div>
+        </div>
+    </div>
+    <div id="sq1"></div>
+    <div id="sq2"></div>
+    <div id="sq3"></div>
+    <div id="sq4"></div>
+    
+</body>
+</html>
